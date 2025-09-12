@@ -1,5 +1,8 @@
 // App.js
 import React from "react";
+import indexHeroBg from "./assets/Parking System Photos/Parking System Photos/Home Page/1.webp"; // place image inside src/assets/
+import about from "./assets/Parking System Photos/Parking System Photos/Tower Parking System/Multi-Level-Parking-Garage1.webp";
+import vision from "./assets/Parking System Photos/Parking System Photos/Tower Parking System/pexels-pixabay-63294.jpg";
 import { motion } from "framer-motion";
 import {
   FaPhoneAlt,
@@ -59,7 +62,71 @@ const App = () => {
           background: "linear-gradient(135deg, #001f3f, #003366, #005f73)",
         }}
       >
-        <div className="absolute bottom-0 left-0 w-full">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={indexHeroBg}
+            alt="Parking background"
+            className="w-full h-full object-cover opacity-50"
+            loading="eager"
+          />
+        </div>
+
+        {/* Foreground content */}
+        <div className="relative z-10 flex flex-col items-center">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            src={logo}
+            alt="AnkerStack Logo"
+            className="h-40 mb-6 rounded-xl shadow-lg bg-white p-4"
+          />
+
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow"
+          >
+            Future-Ready Parking Solutions
+          </motion.h2>
+
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="max-w-2xl text-lg md:text-xl mb-8 mx-auto text-gray-200"
+          >
+            Smart, safe, and innovative stack parking systems for modern cities.
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.6, duration: 0.8 }}
+            className="space-x-4"
+          >
+            <a
+              href="#about"
+              className="bg-[#f05a28] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#d94c1d] transition"
+            >
+              Know More
+            </a>
+            <a
+              href="#contact"
+              className="bg-[#3bb7d2] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#2ea2ba] transition"
+            >
+              Contact Us
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Wave bottom effect */}
+        <div className="absolute bottom-0 left-0 w-full z-0">
           <svg
             className="w-full h-32 text-white/10"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,53 +138,6 @@ const App = () => {
             ></path>
           </svg>
         </div>
-
-        <motion.img
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          src={logo}
-          alt="AnkerStack Logo"
-          className="h-40 mb-6 rounded-xl shadow-lg bg-white p-4"
-        />
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow"
-        >
-          Future-Ready Parking Solutions
-        </motion.h2>
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="max-w-2xl text-lg md:text-xl mb-8 mx-auto text-gray-200"
-        >
-          Smart, safe, and innovative stack parking systems for modern cities.
-        </motion.p>
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="space-x-4"
-        >
-          <a
-            href="#about"
-            className="bg-[#f05a28] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#d94c1d] transition"
-          >
-            Know More
-          </a>
-          <a
-            href="#contact"
-            className="bg-[#3bb7d2] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#2ea2ba] transition"
-          >
-            Contact Us
-          </a>
-        </motion.div>
       </section>
 
       {/* About */}
@@ -135,10 +155,7 @@ const App = () => {
         >
           <h3 className="text-3xl font-bold mb-6 text-[#001f3f]">About Us</h3>
           <p className="text-lg leading-relaxed">
-            Anker Stack is a pioneer in advanced stack parking solutions,
-            dedicated to solving the challenge of urban vehicle parking. We
-            design, manufacture, and install innovative systems that maximize
-            space efficiently while ensuring safety, durability, and ease of use.
+            At Anker Stack, we pride ourselves on being pioneers in the field of advanced stack parking solutions, committed to addressing one of the most pressing challenges of modern urban living—vehicle parking. With cities growing rapidly and space becoming increasingly limited, we design, manufacture, and install cutting-edge parking systems that optimize available land while maintaining the highest standards of safety, reliability, and user convenience. Our solutions are engineered with precision to not only maximize space efficiency but also to ensure long-term durability and smooth operation, making them ideal for residential complexes, commercial establishments, and large-scale infrastructure projects. By combining innovation, technology, and customer-focused design, we aim to transform the way people think about parking—turning congested spaces into organized, accessible, and future-ready environments. With a strong emphasis on quality, sustainability, and continuous improvement, Anker Stack is not just providing products but delivering trust, efficiency, and a smarter way of living in urban landscapes.
           </p>
         </motion.div>
         <motion.div
@@ -148,36 +165,60 @@ const App = () => {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 flex justify-center"
         >
-          <FaCogs className="text-[#3bb7d2] text-[200px]" />
+          <img
+            src={about}
+            alt="About Anker Stack"
+            className="rounded-lg shadow-lg max-w-full h-[60vh] object-cover"
+            loading="lazy"
+          />
         </motion.div>
       </section>
 
       {/* Vision */}
-      <section id="vision" className="py-20 bg-gray-50 text-center relative">
-        <motion.h3
+      <section id="vision" className="h-screen flex justify-center items-center text-center relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="md:w-1/2 flex justify-center"
+        >
+          <img
+            src={vision}
+            alt="About Anker Stack"
+            className="rounded-lg shadow-lg max-w-full h-[60vh] object-cover"
+            loading="lazy"
+          />
+        </motion.div>
+        <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-3xl font-bold mb-8 text-[#001f3f]"
+          className="md:w-1/2"
         >
-          Our Vision
-        </motion.h3>
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="max-w-3xl mx-auto text-lg leading-relaxed"
-        >
-          We aim to transform congested urban spaces into organized, efficient,
-          and sustainable environments through cutting-edge stack parking
-          solutions. By blending innovative engineering, automation, and
-          uncompromising safety, we make parking simpler, faster, and more
-          reliable for everyone.
-        </motion.p>
+          <motion.h3
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold mb-8 text-[#001f3f] text-left"
+          >
+            Our Vision
+          </motion.h3>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="max-w-3xl mx-auto text-lg leading-relaxed px-2 text-start"
+          >
+            At Anker Stack, our vision is to revolutionize the way urban spaces are utilized by transforming overcrowded and chaotic environments into organized, efficient, and sustainable ecosystems through our state-of-the-art stack parking solutions. We aspire to be at the forefront of innovation, leveraging advanced engineering, intelligent automation, and robust safety measures to create parking systems that are not only space-saving but also user-friendly and highly reliable. Our goal is to simplify the everyday challenge of parking, making it faster, safer, and more convenient for individuals, businesses, and communities alike. By continually pushing the boundaries of technology and design, we envision a future where cities are smarter, greener, and better connected—where every inch of space is optimized, every vehicle is secure, and every user experiences unmatched convenience. Through this, we strive to contribute to a sustainable urban future while setting new benchmarks for excellence in the parking solutions industry.
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Solutions / Products */}
