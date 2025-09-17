@@ -16,59 +16,59 @@ import SolutionCard from './SolutionCard';
 const list = [
   {
     id: 1,
-    "image for card": towerparking,
-    "title": "Tower Parking System"
-  },
-  {
-    id: 2,
     "image for card": twopolestack,
     "title": "2 pole Stack Parking System"
   },
   {
-    id: 3,
+    id: 2,
     "image for card": fourpole,
     "title": "4 Pole - 2 Level Stack Parking System"
   },
   {
-    id: 4,
-    "image for card": horizontal,
-    "title": "Horizontal Box Parking System"
-  },
-  {
-    id: 5,
-    "image for card": hydraulicpitpuzzle,
-    "title": "Hydraulic (Pit Puzzle) Parking System"
-  },
-  {
-    id: 6,
-    "image for card": hydraulic3lstack,
-    "title": "Hydraulic 3L Stack Parking System"
-  },
-  {
-    id: 7,
+    id: 3,
     "image for card": hydraulicpitstackdependent,
     "title": "Hydraulic Pit Stack Parking System – Dependent"
   },
   {
-    id: 8,
+    id: 4,
     "image for card": hydraulicpitstackindependent,
     "title": "Hydraulic Pit Stack Parking System – Independent"
   },
   {
-    id: 9,
+    id: 5,
+    "image for card": hydraulic3lstack,
+    "title": "Hydraulic 3L Stack Parking System"
+  },
+  {
+    id: 6,
     "image for card": overgroundpuzzle,
     "title": "Overground Puzzle – Electromechanical (OGP)"
   },
   {
+    id: 7,
+    "image for card": hydraulicpitpuzzle,
+    "title": "Hydraulic (Pit Puzzle) Parking System"
+  },
+  {
+    id: 8,
+    "image for card": towerparking,
+    "title": "Tower Parking System"
+  },
+  {
+    id: 9,
+    "image for card": horizontal,
+    "title": "Horizontal Box Parking System"
+  },
+  {
     id: 10,
-    "image for card": rotaryparking,
-    "title": "Rotary Parking System"
+    "image for card": shuttlecart,
+    "title": "Shuttle/Cart Parking System"
   },
   {
     id: 11,
-    "image for card": shuttlecart,
-    "title": "Shuttle Cart Parking System"
-  }
+    "image for card": rotaryparking,
+    "title": "Rotary Parking System"
+  },
 ]
 const SolutionsList = () => {
   return (
