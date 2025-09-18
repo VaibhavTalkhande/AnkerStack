@@ -89,7 +89,7 @@ const SolutionsList = () => {
             From tower systems to shuttle carts, discover how we can transform
             your parking experience.
           </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-8">
           {list.map((item, index) => (
 
               <SolutionCard name={item.title} id={item.id} image={item["image for card"]} key={index} />
